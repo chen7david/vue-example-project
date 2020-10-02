@@ -1,6 +1,6 @@
 # vue-example-project
 
-## Dockerizing your Vue app
+### Dockerizing your Vue app
 #### Dockerfile
 
 ```dockerfile
