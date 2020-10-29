@@ -1,7 +1,7 @@
 # vue-example-project
 
-
 ### Adding Vuetify to your Project
+Run the command:
 ```cmd
 vue add vuetify
 ```
