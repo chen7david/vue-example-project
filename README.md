@@ -2,8 +2,12 @@
 
 
 ### Adding Vuetify to your Project
+```cmd
+vue add vuetify
+```
 
-##### example App.vue file
+#### example App.vue
+
 ```vue
 <template>
   <v-app>
