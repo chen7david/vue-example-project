@@ -54,6 +54,7 @@ http {
 
 
 ```js
+/*  plugins/vuetify.js */
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
@@ -77,5 +78,32 @@ Vue.prototype.$tmdb = tmdb({
 })
 
 Vue.use(VueAxios, http)
+```
+
+```vue
+<template>
+  <v-app>
+    <Navbar/>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+import Navbar from './components/Navbar';
+
+export default {
+  name: 'App',
+
+  components: {
+    Navbar,
+  },
+
+  data: () => ({
+    
+  }),
+};
+</script>
 ```
 
