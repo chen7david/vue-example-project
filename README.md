@@ -132,6 +132,67 @@ export default {
 </script>
 ```
 
+```js
+/* router/index.js */
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue')
+  },
+  {
+    path: '/movies',
+    name: 'Movies',
+    component: () => import('../views/Movies.vue')
+  },
+  {
+    path: '/movie/:id',
+    name: 'Movie',
+    component: () => import('../views/Movie.vue'),
+    props: true
+  },
+  {
+    path: '/shows',
+    name: 'Shows',
+    component: () => import('../views/Shows.vue')
+  },
+  {
+    path: '/show/:id',
+    name: 'Show',
+    component: () => import('../views/Show.vue'),
+    props: true
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import('../views/Search.vue')
+  },
+  {
+    path: '/documentation',
+    name: 'Documentation',
+    component: () => import('../views/Documentation.vue')
+  },
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
+
+export default router
+```
+
 ## Dockerizing your Vue app
 
 #### Dockerfile
