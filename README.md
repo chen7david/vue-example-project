@@ -1,5 +1,36 @@
 # vue-example-project
 
+
+### Adding Vuetify to your Project
+
+##### example App.vue file
+```vue
+<template>
+  <v-app>
+    <Navbar/>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+import Navbar from './components/Navbar';
+
+export default {
+  name: 'App',
+
+  components: {
+    Navbar,
+  },
+
+  data: () => ({
+    
+  }),
+};
+</script>
+```
+
 ## Dockerizing your Vue app
 
 #### Dockerfile
@@ -85,32 +116,5 @@ Vue.prototype.$tmdb = tmdb({
 })
 
 Vue.use(VueAxios, http)
-```
-
-```vue
-<template>
-  <v-app>
-    <Navbar/>
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
-</template>
-
-<script>
-import Navbar from './components/Navbar';
-
-export default {
-  name: 'App',
-
-  components: {
-    Navbar,
-  },
-
-  data: () => ({
-    
-  }),
-};
-</script>
 ```
 
