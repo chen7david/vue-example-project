@@ -51,3 +51,31 @@ http {
     }
 }
 ```
+
+
+```js
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+
+Vue.use(Vuetify);
+
+export default new Vuetify({
+    theme:{
+        dark: true
+    }
+});
+```
+
+```js
+/* main.js */
+import tmdb from 'tmdb-agent'
+import VueAxios from 'vue-axios'
+
+Vue.prototype.$tmdb = tmdb({
+    apiKey: '****************'
+})
+
+Vue.use(VueAxios, http)
+```
+
